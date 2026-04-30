@@ -13,7 +13,7 @@
 DHT dht(DHTPIN, DHTTYPE);
 
 // Url da API (Render)
-String serverName = "https://api-sensor.onrender.com/sensor";
+String serverName = "https://sensor-api-0oh5.onrender.com/sensor";
 
 // Controle
 float ultimaTemp = -1000;
@@ -71,7 +71,7 @@ void loop() {
   // Monta URL com parâmetros
   String url = serverName + "?temp=" + String(temp) + "&hum=" + String(hum);
 
-  Serial.print("Enviando para: ");
+  Serial.println(" Enviando para: ");
   Serial.println(url);
 
   http.begin(url);
