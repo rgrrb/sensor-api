@@ -3,7 +3,7 @@ const app = express();
 
 let dados = [];
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 app.get("/sensor", (require, response) => {
     const { temp , hum } = require.query;
